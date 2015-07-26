@@ -94,7 +94,7 @@ public class MainPanel extends JPanel
 		this.setLayout(new BorderLayout());
 		this.add(animationPanel, BorderLayout.CENTER);
 		this.add(settingPanel, BorderLayout.EAST);
-		this.add(new JLabel("git@github.com:zoffyzhang"),BorderLayout.SOUTH);
+		this.add(new JLabel("https://github.com/ZoffyZhang/SortAnimation"), BorderLayout.SOUTH);
 
 	}
 
