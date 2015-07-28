@@ -2,7 +2,7 @@
 ![](demo.gif)
 
 #Clearer Image
-![](demo2.png)
+![](demo3.png)
 
 #Design
 ![](SortAnimation.png)
