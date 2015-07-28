@@ -12,6 +12,7 @@ import SortAlgorithms.Heap;
 import SortAlgorithms.Insertion;
 import SortAlgorithms.Merge;
 import SortAlgorithms.Quick;
+import SortAlgorithms.Quick3way;
 import SortAlgorithms.Selection;
 import SortAlgorithms.Shell;
 
@@ -103,6 +104,8 @@ public class AnimationPanel extends JPanel
 			Selection.sort(selectedData);
 		else if (algo.equals("Merge"))
 			Merge.sort(selectedData);
+		else if (algo.equals("Quick3way"))
+			Quick3way.sort(selectedData);
 	}
 
 	private void startPaintThread()
@@ -306,6 +309,11 @@ public class AnimationPanel extends JPanel
 		{
 			cursor[0] = Merge.changing;
 			cursor[1] = Merge.position;
+		}
+		else if (algo.equals("Quick3way"))
+		{
+			cursor[0] = Quick3way.changing;
+			cursor[1] = Quick3way.position;
 		}
 		return cursor;
 	}

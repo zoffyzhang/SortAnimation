@@ -12,6 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.JSlider;
 import SortAlgorithms.Heap;
+import SortAlgorithms.Quick3way;
 
 public class MainPanel extends JPanel
 {
@@ -22,7 +23,7 @@ public class MainPanel extends JPanel
 	private ButtonGroup algosButtonGroup = new ButtonGroup();
 	private ButtonGroup dataButtonGroup = new ButtonGroup();
 
-	private JRadioButton[] algoRadioButtons = new JRadioButton[6];
+	private JRadioButton[] algoRadioButtons = new JRadioButton[7];
 	private JRadioButton[] dataRadioButtons = new JRadioButton[3];
 
 	private JSlider fpsSlider = new JSlider(1, 451, 50);
@@ -48,6 +49,8 @@ public class MainPanel extends JPanel
 		algoRadioButtons[3].setText("Insertion");
 		algoRadioButtons[4].setText("Selection");
 		algoRadioButtons[5].setText("Merge");
+		algoRadioButtons[6].setText("Quick3way");
+
 		dataRadioButtons[0].setText("Random");
 		dataRadioButtons[1].setText("Reversed");
 		dataRadioButtons[2].setText("Natural");
@@ -134,8 +137,16 @@ public class MainPanel extends JPanel
 					if (Heap.thread != null && Heap.thread.isAlive())
 					{
 						AnimationPanel.SPF = 1;	// animation is still running at
-												// background,speed it up
+												// background,minimize the sleep
+												// time
 						Heap.thread.join();
+					}
+					// it's odd that this can not fix the thread problem of
+					// Quick3way
+					if (Quick3way.thread != null && Quick3way.thread.isAlive())
+					{
+						AnimationPanel.SPF = 1;
+						Quick3way.thread.join();
 					}
 				} catch (InterruptedException e1)
 				{

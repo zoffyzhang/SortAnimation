@@ -27,6 +27,7 @@ public class MainFrame extends JFrame
 
 	public static void main(String[] args)
 	{
+		// NimbusLookAndFeel may result in GUI initialize failure sometimes
 		try
 		{
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
