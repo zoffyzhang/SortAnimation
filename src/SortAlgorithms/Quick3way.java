@@ -40,7 +40,7 @@ public class Quick3way
 	public static Thread thread;
 
 	@SuppressWarnings("rawtypes")
-	public static void sort(Comparable[] a)
+	public static void sort(final Comparable[] a)
 	{
 
 		/*

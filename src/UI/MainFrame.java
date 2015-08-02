@@ -15,19 +15,19 @@ public class MainFrame extends JFrame
 	{
 		super(title);
 		add(new MainPanel());
+		setResizable(false);
+		setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+		setVisible(true);
 		pack();
 		int width = this.getWidth();
 		int height = this.getHeight();
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		setLocation((screenSize.width - width) / 2, (screenSize.height - height) / 2);
-		setResizable(false);
-		setVisible(true);
-		setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+
 	}
 
 	public static void main(String[] args)
 	{
-		// NimbusLookAndFeel may result in GUI initialize failure sometimes
 		try
 		{
 			UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
