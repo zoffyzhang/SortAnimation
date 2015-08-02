@@ -112,6 +112,7 @@ public class AnimationPanel extends JPanel
 	{
 		new Thread()
 		{
+			@Override
 			public void run()
 			{
 				while (threadContinue)

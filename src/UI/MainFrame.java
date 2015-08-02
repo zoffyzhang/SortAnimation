@@ -2,10 +2,10 @@ package UI;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
-import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.WindowConstants;
 
 public class MainFrame extends JFrame
 {
@@ -16,7 +16,7 @@ public class MainFrame extends JFrame
 		super(title);
 		add(new MainPanel());
 		setResizable(false);
-		setDefaultCloseOperation(JDialog.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		setVisible(true);
 		pack();
 		int width = this.getWidth();
