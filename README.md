@@ -1,10 +1,8 @@
-#GIF Demo
-![](demo.gif)
+## GIF Demo
+![](./demo.gif)
 
-#Clearer Image
-![](demo3.png)
+## Screen Shoot
+![](./demo3.png)
 
-#Design
-![](SortAnimation.png)
-
-
+## Design
+![](./SortAnimation.png)
